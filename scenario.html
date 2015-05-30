@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <link rel="stylesheet" href="markdown.css" type="text/css" />
+</head>
+<body>
+<h1 id="le-projet-web-dont-vous-êtes-les-héros">Le projet web dont vous êtes les héros</h1>
+<h3 id="starter">Starter</h3>
+<p>Ceci est un jeu qui suit le principe de &quot;Parsely Games&quot; : un jeu collectif, qui simule les jeux &quot;en mode texte&quot; de notre enfance (ou adolescence, ou quand vous étiez incarné dans une limace).</p>
+<p>Chacun son tour, les participants peuvent donner une instruction au <em>Parser</em> (c'est moi). S'il comprend l'instruction donnée, il décrit ce qui se passe et c'est au suivant de donner une instruction et ainsi de suite.</p>
+<p><strong>À tout moment</strong>, un joueur peut donner comme instructions :</p>
+<ul>
+<li><em>Sauvegarde</em> : qui enregistre la partie en cours, pour éviter le Game Over décevant,</li>
+<li><em>Charger</em> : pour charger la sauvegarde,</li>
+<li><em>Inventaire</em> : pour donner la liste des objets que vous avez dans votre inventaire.</li>
+</ul>
+<h2 id="notes-de-tout-le-temps">Notes de tout le temps</h2>
+<h3 id="café">Café</h3>
+<p>Si le joueur <strong>boit un café</strong>, il augmente son compteur de 1. Chaque fois que ce compteur augmente, vous devez signifier ses effets (<em>&quot;vous vous sentez mieux&quot;, &quot;vous vous sentez bizarre&quot;, &quot;ça provoque des petits tremblements, mais ça va&quot;</em>). Arrivé à 6, lisez le texte suivant:</p>
+<blockquote>
+<p>À partir de ce moment, tout ce dont vous vous souvenez, c'est la voix du chef de la Police qui vous intime l'ordre de lâcher cette tasse. Vous réalisez que vous êtes dans une camisole de force, tout ce que vous voyez c'est le plafond blanc, ce que vous entendez, c'est la voix de l'infirmier qui vous dit &quot;ah oui, on dirait que ça va mieux : vous êtes à la maison de repos <em>les magnolias</em>, vous allez sûrement rester un moment. Vous avez compris ?&quot;</p>
+<p>Vous avez perdu.</p>
+</blockquote>
+<h3 id="violence">Violence</h3>
+<p>La moindre violence de la part du joueur provoque son renvoi, par le texte suivant :</p>
+<blockquote>
+<p>Votre <strong>chef</strong> intervient brusquement, vous attrape par le col, vous signifie votre renvoi immédiat.</p>
+<p>Vous avez perdu.</p>
+</blockquote>
+<h2 id="introduction----lopen-space">Introduction -- L'open-space</h2>
+<blockquote>
+<p>Il est 9h00. Vous êtes assis à votre bureau. Vous avez une <strong>tasse de café</strong> chaud dans votre main. <strong>L'open-space</strong> est vide. De l'autre côté de la porte se trouve le <strong>couloir</strong>. Dans votre inventaire vous avez <strong>LA BASE VIRALE A ÉTÉ MISE À JOUR</strong> votre <strong>ordinateur portable</strong>.</p>
+</blockquote>
+<p>Avant de faire toute action physique, il faut <strong>boire le café</strong>. Tant que le joueur demande à faire quelque chose, vous répondez :</p>
+<blockquote>
+<p>&quot;Vous êtes tout raplala&quot;</p>
+</blockquote>
+<p>Si vous <strong>buvez le café</strong>, le Parseur vous signifiera que vous avez bu &quot;1 café&quot; de plus.</p>
+<h2 id="ordinateur-portable">Ordinateur Portable</h2>
+<p>L'ordinateur portable est disponible en permanence, via l'<em>inventaire</em>. Il suffit que le joueur propose de l'allumer ou de l'ouvrir ou d'y accéder.</p>
+<blockquote>
+<p>Bienvenue sur votre <em>système d'exploitation préféré</em>. Dans le menu principal <strong>LA BASE VIRALE A ÉTÉ MISE À JOUR</strong> vous avez accès à vos applications les plus fréquemment utilisées :</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>La <strong>messagerie</strong>,</li>
+<li>L'application de <strong>Réseau Social</strong>,</li>
+<li><strong>l'Agenda partagé</strong>,</li>
+</ul>
+</blockquote>
+<h3 id="la-messagerie">La Messagerie</h3>
+<blockquote>
+<p>Vous avez <code>$N</code> messages non lus, dont <code>$M</code> spams. Le <em>client</em> vient de vous envoyer <code>$X</code> emails vous urgeant de résoudre le problème : le site est en retard, il devrait être en ligne et personne <strong>LA BASE VIRALE A ÉTÉ MISE À JOUR</strong> ne semble se bouger le petit doigt pour lui.</p>
+</blockquote>
+<p><em>Note importante</em> : l'ensemble de la société est en copie du mail. Du P.D.G. au stagiaire.</p>
+<p>Si le joueur <strong>répond au client</strong>, quelle que soit la réponse il renverra instantanément une réponse incendiaire, sans prendre en compte le message et en continuant de mettre la pression.</p>
+<blockquote>
+<p>Monsieur : j'ai l'impression qu'ici, tout le monde se fiche de moi et renvoie la patate chaude. J'exige que tout soit livré ce soir, dernier délai ! Et dès que vous avez quelque chose à me montrer, envoyez-moi <strong>immédiatement</strong> un email !</p>
+</blockquote>
+<h3 id="quand-le-joueur-a-la-clé-usb">Quand le joueur a la clé USB</h3>
+<p>Il doit accéder à sa messagerie et envoyer le contenu de la clé USB par mail aux <strong>développeurs</strong>.</p>
+<h3 id="si-le-joueur-a-remis-ses-devs-au-travail">Si le joueur a remis ses devs au travail</h3>
+<blockquote>
+<p>C'est avec joie que vous avez réussi votre <strong>LA BASE VIRALE A ÉTÉ MISE À JOUR</strong> mission. Vous pouvez triomphalement annoncer au client que le site sera livré dans les temps. Pour preuve, vous lui envoyez une URL pointant vers la page de démo.</p>
+<p>Quatre minutes plus tard, le client répond que le site est illisible sur son Blackberry.</p>
+<p>On peut dire que vous n'avez pas perdu. La partie est terminée.</p>
+</blockquote>
+<h3 id="réseau-social">Réseau social</h3>
+<blockquote>
+<p>Un petit coup de <em>Tweetbook</em>, en douce... personne n'y verra rien... ARGH ! Le <strong>chef</strong> débarque et vous surprend en train de glandouiller sur le <strong>réseau social</strong>. Il vous passe un savon géant qui dure dix minutes.</p>
+</blockquote>
+<p>Si le joueur est de nouveau supris en train de glander :</p>
+<blockquote>
+<p>Le <strong>chef</strong> débarque et vous suprend encore en train de glandouiller.</p>
+<p>Vous êtes viré. Vous avez perdu.</p>
+</blockquote>
+<h3 id="lagenda-partagé">L'Agenda partagé</h3>
+<blockquote>
+<p>Une seule réunion est programmée pour aujourd'hui, à 9h00, en <strong>salle de réunion</strong>.</p>
+</blockquote>
+<h2 id="lopen-space">L'open-space</h2>
+<p>L'open-space restera vide tant que le joueur n'aura pas rameuté les <strong>développeurs</strong>.</p>
+<h3 id="vous-navez-rien-fait">Vous n'avez rien fait</h3>
+<blockquote>
+<p>L'open-space est vide. À part l'animation de vos économiseurs d'écran, rien ne bouge. Derrière vous se trouve <strong>votre bureau</strong>, et une porte mène <strong>au couloir</strong>.</p>
+</blockquote>
+<h3 id="le-réseau-et-le-serveur-de-fichiers-sont-revenus">Le réseau et le serveur de fichiers sont revenus</h3>
+<blockquote>
+<p>L'open-space grouille de toutes parts. Les <strong>développeurs</strong> cliquouillent à qui-mieux-mieux... pour dézinguer une horde d'aliens. Derrière vous se trouve <strong>votre bureau</strong>, et une porte mène <strong>au couloir</strong>.</p>
+</blockquote>
+<ul>
+<li>Si le joueur parle aux <strong>développeurs</strong> : <em>&quot;Attends, je peux pas te parler de suite, j'ai bientôt fini la mission&quot;.</em></li>
+</ul>
+<h3 id="les-développeurs-sont-au-travail">Les développeurs sont au travail</h3>
+<blockquote>
+<p>L'open-space grouille de toutes parts. Les <strong>développeurs</strong> cliquouillent à qui-mieux-mieux pour finir dans les temps. Derrière vous se trouve <strong>votre bureau</strong>, et une porte mène <strong>au couloir</strong>.</p>
+</blockquote>
+<ul>
+<li>Si le joueur parle aux <strong>développeurs</strong> : <em>&quot;Non mais si tu m'interromps tout le temps, j'aurai jamais fini avant ce soir !&quot;.</em></li>
+</ul>
+<h2 id="le-couloir">Le couloir</h2>
+<blockquote>
+<p>Le couloir mène à <strong>votre bureau</strong>, la <strong>salle de réunion</strong>, le <strong>bureau du directeur artistique</strong>, la <strong>salle de repos</strong>, <strong>l'escalier vers le sous-sol</strong>.</p>
+</blockquote>
+<h2 id="la-salle-de-réunion">La salle de réunion</h2>
+<h3 id="si-le-joueur-entre-dans-la-salle-de-réunion-tôt-dans-la-partie">Si le joueur entre dans la salle de réunion &quot;tôt&quot; dans la partie</h3>
+<blockquote>
+<p>Vous entrez dans la <strong>salle de réunion</strong>, il y a des chaises, une grande table, une porte qui donne sur <strong>le couloir</strong>.</p>
+<p>(Sur la table se trouve <strong>un colis</strong> visiblement abandonné.)</p>
+<p>Douze paires d'yeux se tournent vers vous, l'air hagards. Le sous-directeur de production assistant vous indique <strong>une chaise</strong> en vous disant : &quot;Oh ! c'est vous ? je ne savais pas que vous étiez convié à cette réunion. Asseyez-vous, je vous en prie...&quot;</p>
+</blockquote>
+<h3 id="si-le-joueur-entre-en-cours-de-journée">Si le joueur entre en cours de journée</h3>
+<blockquote>
+<p>Vous entrez dans la <strong>salle de réunion</strong>, il y a des chaises, une grande table, une porte qui donne sur <strong>le couloir</strong>.</p>
+<p>(Sur la table se trouve <strong>un colis</strong> visiblement abandonné.)</p>
+<p>Douze paires d'yeux se tournent vers vous, l'air hagards. Le sous-directeur de production assistant vous indique <strong>une chaise</strong> en vous disant : &quot;Oh ! c'est vous ? Vous êtes en retard, mais ce n'est pas grave. Poursuivons : diapositive numéro <code>$X</code>&quot;.</p>
+</blockquote>
+<p>(Le nombre <code>$X</code> ne fait qu'augmenter)</p>
+<p>Si le joueur s'assied sur la chaise :</p>
+<blockquote>
+<p>Toute la journée s'écoule comme un long et lent film au ralenti, agrémenté de 454 slides toutes plus lénifiantes les unes que les autres. Hypnotisé par cette voix monocorde qui commente ces slides, vous ne voyez plus le temps passer. C'est la fin de la journée. Le client est furieux et le projet tombe à l'eau.</p>
+<p>Vous êtes viré. Vous avez perdu.</p>
+</blockquote>
+<p>La seule façon de s'en sortir est de retourner dans le <strong>couloir</strong>.</p>
+<p>Si le joueur prend <strong>le colis</strong>, il constate qu'il est adressé au <strong>stagiaire</strong>.</p>
+<h2 id="le-bureau-du-directeur-artistique">Le bureau du directeur artistique</h2>
+<p>Le bureau du directeur artistique restera vide si le réseau est coupé.</p>
+<h3 id="si-vous-navez-encore-rien-fait">Si vous n'avez encore rien fait</h3>
+<p>(pas de réseau, pas de serveur de fichiers)</p>
+<blockquote>
+<p>Un Mac flambant neuf, quadruple-écran. Une tablette graphique dernier cri. Une plante verte carnivore et un vivarium où se trouve un crocodile nain du Brésil. C'est tout ce qu'on voit.</p>
+<p>Derrière vous se trouve une porte qui donne vers <strong>le couloir</strong>.</p>
+</blockquote>
+<h3 id="si-le-serveur-de-fichiers-est-rétabli">Si le serveur de fichiers est rétabli</h3>
+<blockquote>
+<p>Un Mac flambant neuf, quadruple-écran. Une tablette graphique dernier cri. Une plante verte carnivore et un vivarium où se trouve un crocodile nain du Brésil. C'est tout ce qu'on voit. Le DA est à sa planche à dessin, il tape et dessine simultanément, ce qui vous fait vous interroger sur le nombre de bras dont il dispose. À côté de son bureau se trouve une <strong>clé USB</strong>.</p>
+<p>Derrière vous se trouve une porte qui donne vers <strong>le couloir</strong>.</p>
+</blockquote>
+<ul>
+<li>Si le joueur s'adresse au DA, il lui répondra <em>Les découpes ? Mais bien sûr que je les ai, elles sont dans cette <strong>clé USB</strong>, là. Normalement, il aurait fallu les mettre sur le réseau, mais y'avait plus de place sur les disques...</em>.</li>
+<li>Le joueur peut alors prendre la <strong>clé USB</strong> et la télécharger sur son laptop. Alors seulement il pourra donner les maquettes HTML <strong>aux developpeurs</strong>.</li>
+</ul>
+<h2 id="la-salle-de-repos">La salle de repos</h2>
+<h3 id="si-vous-navez-rien-fait">Si vous n'avez rien fait</h3>
+<blockquote>
+<p>L'attente est longue à la <strong>machine à café</strong> ! On dirait que toute la boîte s'est donné rendez-vous en salle de repos. Vous y voyez <strong>les sysadmins</strong>, les <strong>développeurs</strong>, le <strong>directeur artistique</strong>, le <strong>stagiaire</strong>.</p>
+<p>Derrière vous se trouve la porte qui mène <strong>au couloir</strong>.</p>
+</blockquote>
+<ul>
+<li>Le joueur parle aux <strong>sysadmins</strong> : <em>ah ben ouais, il paraît que le réseau est down, on attend juste que le stagiaire aille nous trouver un câble wifi</em>.</li>
+<li>Le joueur parle aux <strong>développeurs</strong> : <em>ah ben le réseau est down, on peut rien faire</em>.</li>
+<li>Le joueur parle au <strong>DA</strong> : <em>ah ben le réseau est down, tu crois que je vais les trouver où, les images de la page d'accueil ? sur le catalogue Akei ?</em></li>
+<li>Si le joueur parle au <strong>stagiaire</strong> : <em>non mais un câble wifi, c'est pour faire quoi déjà ? Ah ouais, le réseau. je crois que le câble est arrivé, mais je sais pas où il est</em>.</li>
+<li>Si le joueur est en possession du colis, il peut le <strong>donner au stagiaire</strong>. Cela aura pour effet de rétablir le réseau.</li>
+<li>Si le joueur prend un café, vous augmentez son total de 1.</li>
+</ul>
+<h3 id="si-le-réseau-est-revenu">Si le réseau est revenu</h3>
+<blockquote>
+<p>L'attente est longue à la <strong>machine à café</strong> ! On dirait que presque toute la boîte s'est donné rendez-vous en salle de repos. Vous y voyez les <strong>développeurs</strong>, le <strong>directeur artistique</strong>, le <strong>stagiaire</strong>.</p>
+<p>Derrière vous se trouve la porte qui mène <strong>au couloir</strong>.</p>
+</blockquote>
+<ul>
+<li>Le joueur parle aux <strong>développeurs</strong> : <em>ah ben le réseau est ok, c'est cool, mais les serveurs de base de données ils sont down, on peut rien faire</em>.</li>
+<li>Le joueur parle au <strong>DA</strong> : <em>ah ben le réseau est ok, c'est cool, mais les serveurs de fichiers sont down, tu crois que je vais les stocker où, les images de la page d'accueil ? sur une clé USB ?</em></li>
+<li>Si le joueur parle au <strong>stagiaire</strong> : <em>ah ouais, le réseau est revenu, c'est cool, mais je crois qu'il manque le mot de passe admin aux sysadmins. c'est vous qui l'avez changé, non ?</em>.</li>
+<li>Si le joueur prend un café, vous augmentez son total de 1.</li>
+</ul>
+<h3 id="si-le-serveur-de-fichiers-est-revenu">Si le serveur de fichiers est revenu</h3>
+<blockquote>
+<p>Il y a peu d'attente à la <strong>machine à café</strong> ! Mais quand même, on y trouve certains <strong>développeurs</strong> et le <strong>stagiaire</strong>.</p>
+<p>Derrière vous se trouve la porte qui mène <strong>au couloir</strong>.</p>
+</blockquote>
+<ul>
+<li>Le joueur parle aux <strong>développeurs</strong> : <em>ok, c'est vrai, techniquement, on pourrait bosser un peu, mais en fait le DA nous a pas encore filé les découpes alors comment tu veux qu'on livre ? on peut rien faire</em>.</li>
+<li>Si le joueur parle au <strong>stagiaire</strong> : <em>Je crois que les dévs ont commencé une partie de jeu de rôles en réseau en attendant les découpes du DA. Moi je pourrais les faire, mais il a pas voulu que je touche son ordi. Des bad vibes, qu'il disait.</em>.</li>
+<li>Si le joueur prend un café, vous augmentez son total de 1.</li>
+</ul>
+<h2 id="le-sous-sol">Le sous-sol</h2>
+<h3 id="si-vous-navez-rien-fait-1">Si vous n'avez rien fait</h3>
+<blockquote>
+<p>La salle serveur vrombit. Les écrans sont noirs. Ça fait un peu peur quand même...</p>
+<p>Derrière vous se trouve la porte qui mène à l'escalier et débouche sur le <strong>couloir</strong>.</p>
+</blockquote>
+<h3 id="si-le-réseau-est-rétabli">Si le réseau est rétabli</h3>
+<blockquote>
+<p>La salle serveur vrombit. Les écrans sont noirs et des caractères étranges défilent sur l'écran. Plusieurs barbus (dont certains sont des filles) sont penchés sur <strong>un clavier</strong> et essaient toutes sortes de combinaisons possibles pour se connecter.</p>
+<p>Le barbu en chef vous envoie un regard d'une grande méchanceté. Derrière vous se trouve la porte qui mène à l'escalier et débouche sur le <strong>couloir</strong>.</p>
+</blockquote>
+<ul>
+<li>Si le joueur <strong>parle aux sysadmins</strong>, ils vont l'apostropher sous prétexte qu'il a changé le mot de passe qui était le même depuis 6 ans, que c'est un sacrilège.</li>
+<li>Si le joueur <strong>entre ou donne son mot de passe</strong>, le barbu en chef reprend la main sur le clavier. Ceci débloque <em>la mise en route des serveurs</em>.</li>
+</ul>
+<h2 id="décompte-des-points">Décompte des points</h2>
+<ul>
+<li>Si le joueur a accompli sa mission, vous avez 100 points.</li>
+<li>Si le joueur s'est fait choper sur Tweetbook, enlevez 10 points.</li>
+<li>Pour chaque tasse de café absorbée par le joueur, retirez 10 points.</li>
+</ul>
+</body>
+</html>
