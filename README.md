@@ -13,3 +13,9 @@ Le projet web dont vous êtes **les** héros - 2015 - Bruno Bord
 ## Build
 
 Pour construire la page HTML, il vous faut [Pandoc](http://pandoc.org/) et `make` (cf. le Makefile).
+
+## Browse
+
+La page HTML de résultat est visible (et imprimable) depuis l'adresse suivante : [http://brunobord.github.io/parsely-sudweb-2015/](http://brunobord.github.io/parsely-sudweb-2015/).
+
+Amusez-vous bien !
